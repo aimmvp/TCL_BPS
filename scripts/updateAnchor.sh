@@ -19,3 +19,13 @@ export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric
 peer channel update -o orderer2:7050 -c $CHANNEL_NAME -f ../channel-artifacts/org2Anchors.tx --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/org0/orderers/orderer2/msp/tlscacerts/tlsca.org0-cert.pem
 
 echo '====== peer5, end.  ========'
+
+echo '====== peer8, start to update channel anchor ========' 
+
+export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org3/users/Admin@org3/msp
+export CORE_PEER_ADDRESS=peer8:7051
+export CORE_PEER_LOCALMSPID="org3"
+export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org3/peers/peer8/tls/ca.crt
+peer channel update -o orderer2:7050 -c $CHANNEL_NAME -f ../channel-artifacts/org3Anchors.tx --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/org0/orderers/orderer2/msp/tlscacerts/tlsca.org0-cert.pem
+
+echo '====== peer8, end.  ========'

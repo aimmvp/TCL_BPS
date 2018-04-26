@@ -12,3 +12,4 @@ docker run -itd \
 -e KAFKA_ZOOKEEPER_CONNECT=zk1:2181 \
 -e CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=qa-test-net \
 hyperledger/fabric-kafka:$TAG #x86_64-1.0.3
+

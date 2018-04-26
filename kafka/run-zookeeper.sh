@@ -5,4 +5,5 @@ docker run -itd \
 --network qa-test-net \
 -p 2181:2181 \
 -e CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=qa-test-net \
-hyperledger/fabric-zookeeper:$TAG
+hyperledger/fabric-zookeeper:$TAG \
+

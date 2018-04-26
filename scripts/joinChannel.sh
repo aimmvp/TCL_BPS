@@ -37,3 +37,23 @@ export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric
 peer channel join -b channel1.block
 
 echo '====== peer6, end.  ========'
+
+echo '====== peer7, start to join channel ========'
+
+export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org3/users/Admin@org3/msp
+export CORE_PEER_ADDRESS=peer7:7051
+export CORE_PEER_LOCALMSPID="org3"
+export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org3/peers/peer7/tls/ca.crt
+peer channel join -b channel1.block
+
+echo '====== peer7, end.  ========'
+
+echo '====== peer8, start to join channel ========'
+
+export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org3/users/Admin@org3/msp
+export CORE_PEER_ADDRESS=peer8:7051
+export CORE_PEER_LOCALMSPID="org3"
+export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org3/peers/peer8/tls/ca.crt
+peer channel join -b channel1.block
+
+echo '====== peer8, end.  ========'
