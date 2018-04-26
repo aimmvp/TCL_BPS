@@ -1,8 +1,17 @@
+#! /bin/bash
+
+# For more on CouchDB configuration, refer
+#   -http://docs.couchdb.org/en/2.0.0/config/
+#   -http://docs.couchdb.org/en/2.0.0/config-ref.html : CouchDB configuration reference
+
 TAG=${1}
 name=${2:-couch0}
 port=${3:-5984}
 docker_network=${4:-hyp-net}
 
+# TODO Check first whether the docker container with specified name already exists or not
+
+#echo "run-couchdb.sh  TAG : " $TAG
 sudo rm -rf `pwd`/../provision/production/couchdb/$name
 
 docker run -itd \
