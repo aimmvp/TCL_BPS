@@ -1,5 +1,5 @@
 export VERSION=1.1.0
-rt VERSION=1.1.0
+export VERSION=1.1.0
 export PREVIEW_VERSION=0.4.6
 export PREVIEW2_VERSION=0.4.6
 export ARCH=$(echo "$(uname -s|tr '[:upper:]' '[:lower:]' | sed  's/mingw64_nt.*/windows/')-$(uname -m | sed 's/x84_64/amd64/g')" | awk '{print tolower($0)}')
