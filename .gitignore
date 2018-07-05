@@ -1,0 +1,5 @@
+generated/crypto-config
+generated/crypto
+node_modules/
+*.tx
+*.block
