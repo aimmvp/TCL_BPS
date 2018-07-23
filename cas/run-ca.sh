@@ -22,7 +22,7 @@ host_base_dir=`pwd`/../generated/crypto/${type}Organizations/${org_name}
 fabric_ca_server_home=`pwd`/../provision/production/${name}
 
 sudo mkdir -p ${fabric_ca_server_home}
-sudo chgrp -R blockchain ${fabric_ca_server_home}
+sudo chgrp -R $USER ${fabric_ca_server_home}
 sudo chown -R $USER ${fabric_ca_server_home}
 
 

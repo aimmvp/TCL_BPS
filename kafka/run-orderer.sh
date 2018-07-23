@@ -12,7 +12,7 @@
   orderer_home=`pwd`/../provision/production/${name}
 
   sudo mkdir -p ${orderer_home}
-  sudo chgrp -R blockchain ${orderer_home}
+  sudo chgrp -R $USER ${orderer_home}
   sudo chown -R $USER ${orderer_home}
 
   docker run -itd \

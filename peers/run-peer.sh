@@ -30,7 +30,7 @@ peer_home=`pwd`/../provision/production/${name}
 
 echo "run-peer.sh  TAG : " $TAG
 sudo mkdir -p ${peer_home}
-sudo chgrp -R blockchain ${peer_home}
+sudo chgrp -R $USER ${peer_home}
 sudo chown -R $USER ${peer_home}
 
 
